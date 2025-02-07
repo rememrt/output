@@ -60,9 +60,9 @@ export class CrossrefEnrichService extends ApiEnrichDOIService {
         cost_approach: UpdateOptions.REPLACE_IF_EMPTY,
     };
     protected url = 'https://api.crossref.org/works/';
-    protected param_string = '';
+    protected param_string = ('mailto=' + this.configService.get('api_email_crossref') || '');
     protected name = 'Crossref';
-    protected parallelCalls = 10;
+    protected parallelCalls = 1;
 
     protected importTest(element: any): boolean {
         return element;

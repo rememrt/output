@@ -19,7 +19,8 @@ export interface AppConfig {
     openalex_id? : string;
     api_key_unpaywall? : string;
     api_key_oam? : string;
-    api_key_scopus?: string;
+    api_key_scopus? : string;
+    api_email_crossref? : string;
     init_service: Type<InitService>;
     import_services: {path: string, class: Type<AbstractImportService>}[];
     doi_import_service: string;

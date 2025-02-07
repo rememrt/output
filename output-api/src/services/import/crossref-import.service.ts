@@ -66,6 +66,7 @@ export class CrossrefImportService extends ApiImportOffsetService {
     protected offset_count = 0;
     protected offset_start = 0;
     protected params: { key: string, value: string }[] = [
+        { key: 'mailto', value: this.configService.get('api_email_crossref') || ''},
         { key: 'query.affiliation', value: '' },
         { key: 'query.bibliographic', value: '' }];
     protected name = 'Crossref';
